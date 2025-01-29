@@ -1,8 +1,8 @@
 {
   "name": "@siamf/upload",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "A fully headless React package for handling image and file uploads with complete UI control. It provides four flexible components—ImageUpload, MultiImageUpload, FileUpload, and MultiFileUpload.",
-  "homepage": "https://github.com/siamahnaf/siamf-upload",
+  "homepage": "https://github.com/siamahnaf/upload",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [
@@ -38,8 +38,8 @@
   ],
   "repository": {
     "type": "git",
-    "directory": "https://github.com/siamahnaf/siamf-upload",
-    "url": "https://github.com/siamahnaf/siamf-upload"
+    "directory": "https://github.com/siamahnaf/upload",
+    "url": "https://github.com/siamahnaf/upload"
   },
   "devDependencies": {
     "@types/node": "^22.12.0",
