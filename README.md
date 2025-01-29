@@ -29,7 +29,7 @@ $ npm i @siamf/upload
 ```javascript
 "use client"
 import { useState } from "react";
-import { ImageUpload, ImageType } from "@/package";
+import { ImageUpload, ImageType } from "@siamf/upload";
 
 const Page = () => {
   //State
@@ -83,7 +83,7 @@ export default Page;
 ```javascript
 "use client"
 import { useState } from "react";
-import { MultiImageUpload, MultiImageType } from "@/package";
+import { MultiImageUpload, MultiImageType } from "@siamf/upload";
 
 const Page = () => {
   //State
