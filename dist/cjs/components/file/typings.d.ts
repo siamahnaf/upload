@@ -9,11 +9,11 @@ export type FileType = {
 } | null;
 type TExportTypes = {
     dragProps: {
-        onDrop: (e: DragEvent<HTMLDivElement>) => void;
-        onDragEnter: (e: DragEvent<HTMLDivElement>) => void;
-        onDragLeave: (e: DragEvent<HTMLDivElement>) => void;
-        onDragOver: (e: DragEvent<HTMLDivElement>) => void;
-        onDragStart: (e: DragEvent<HTMLDivElement>) => void;
+        onDrop: (e: DragEvent<any>) => void;
+        onDragEnter: (e: DragEvent<any>) => void;
+        onDragLeave: (e: DragEvent<any>) => void;
+        onDragOver: (e: DragEvent<any>) => void;
+        onDragStart: (e: DragEvent<any>) => void;
     };
     isDragging: boolean;
     onFileUpload: () => void;
