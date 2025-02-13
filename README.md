@@ -284,7 +284,7 @@ export default Page;
   </tr>
    <tr>
     <td> maxFileSize </td>
-    <td> Max file size validation </td>
+    <td> Max file size validation(KB) </td>
     <td> number </td>
     <td> optional </td>
   </tr>
@@ -391,7 +391,7 @@ export default Page;
   </tr>
    <tr>
     <td> maxFileSize </td>
-    <td> Max file size validation </td>
+    <td> Max file size validation(KB) </td>
     <td> number </td>
     <td> optional </td>
   </tr>
@@ -514,7 +514,7 @@ export default Page;
   </tr>
    <tr>
     <td> maxFileSize </td>
-    <td> Max file size validation </td>
+    <td> Max file size validation(KB) </td>
     <td> number </td>
     <td> optional </td>
   </tr>
@@ -603,7 +603,7 @@ export default Page;
   </tr>
    <tr>
     <td> maxFileSize </td>
-    <td> Max file size validation </td>
+    <td> Max file size validation(KB) </td>
     <td> number </td>
     <td> optional </td>
   </tr>

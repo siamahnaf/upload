@@ -43,7 +43,7 @@ const MultiImageUpload = ({ inputProps, acceptType, maxFileSize, resolutionWidth
             newErrors.maxNumber = true;
         for (let i = 0; i < files.length; i++) {
             const file = files[i];
-            const uploadSize = Number((file.size / 1024 * 1024).toFixed(2));
+            const uploadSize = Number((file.size / 1024).toFixed(2));
             //Accept Type Error
             if (!getImageAccepts(acceptType).includes(file.type))
                 newErrors.acceptType = true;

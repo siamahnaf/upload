@@ -36,7 +36,7 @@ const FileUpload = ({ children, onChange, value, onError, inputProps, acceptType
             acceptType: false,
             maxFileSize: false,
         };
-        const uploadSize = Number((file.size / 1024 * 1024).toFixed(2));
+        const uploadSize = Number((file.size / 1024).toFixed(2));
         if (maxFileSize && uploadSize > maxFileSize)
             newErrors.maxFileSize = true;
         if (!getFileAccepts(acceptType).includes(file.type))

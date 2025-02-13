@@ -39,7 +39,7 @@ const ImageUpload = ({ inputProps, acceptType, maxFileSize, resolutionWidth, res
             maxFileSize: false,
             resolution: false,
         };
-        const uploadSize = Number((file.size / 1024 * 1024).toFixed(2));
+        const uploadSize = Number((file.size / 1024).toFixed(2));
         //Max File Size Check
         if (maxFileSize && uploadSize > maxFileSize)
             newErrors.maxFileSize = true;
