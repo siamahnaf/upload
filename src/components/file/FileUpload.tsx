@@ -19,6 +19,21 @@ const FileUpload = ({ children, onChange, value, onError, inputProps, acceptType
     const [isDragging, setIsDragging] = useState<boolean>(false);
     const [errors, setErrors] = useState<FileErrorTypes>({ acceptType: false, maxFileSize: false });
 
+    //Handle File
+    const handleFile = (file: File) => {
+        const lastDotIndex = file.name.lastIndexOf(".");
+        const hasExtension = lastDotIndex !== -1 && lastDotIndex !== 0;
+
+        return {
+            file,
+            fileInfo: {
+                name: hasExtension ? file.name.slice(0, lastDotIndex) : file.name,
+                ext: hasExtension ? file.name.slice(lastDotIndex + 1) : "",
+                size: Number((file.size / 1024 / 1024).toFixed(2)),
+                type: file.type,
+            }
+        };
+    };
 
     //Handle Change
     const handleChange = async (files: FileList | null) => {
@@ -44,13 +59,7 @@ const FileUpload = ({ children, onChange, value, onError, inputProps, acceptType
             return;
         }
 
-        onChange({
-            file: file, fileInfo: {
-                name: file.name.split(".")[0],
-                size: uploadSize,
-                type: file.type,
-            }
-        });
+        onChange(handleFile(file));
     };
 
 

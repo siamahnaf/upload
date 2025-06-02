@@ -27,14 +27,19 @@ const MultiFileUpload = ({ children, onChange, value, onError, inputProps, accep
     const [indexKey, setIndexKey] = useState(DEFAULT_INDEX);
     const [errors, setErrors] = useState({ acceptType: false, maxFileSize: false, maxNumber: false });
     //Handle File
-    const handleFile = (file) => ({
-        file,
-        fileInfo: {
-            name: file.name.split(".")[0] || file.name,
-            size: Number((file.size / 1024 * 1024).toFixed(2)),
-            type: file.type,
-        }
-    });
+    const handleFile = (file) => {
+        const lastDotIndex = file.name.lastIndexOf(".");
+        const hasExtension = lastDotIndex !== -1 && lastDotIndex !== 0;
+        return {
+            file,
+            fileInfo: {
+                name: hasExtension ? file.name.slice(0, lastDotIndex) : file.name,
+                ext: hasExtension ? file.name.slice(lastDotIndex + 1) : "",
+                size: Number((file.size / 1024 / 1024).toFixed(2)),
+                type: file.type,
+            }
+        };
+    };
     //Handle The File Change
     const handleChange = (files) => __awaiter(void 0, void 0, void 0, function* () {
         if (!files)

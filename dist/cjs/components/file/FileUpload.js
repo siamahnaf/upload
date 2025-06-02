@@ -26,6 +26,20 @@ const FileUpload = ({ children, onChange, value, onError, inputProps, acceptType
     //State
     const [isDragging, setIsDragging] = (0, react_1.useState)(false);
     const [errors, setErrors] = (0, react_1.useState)({ acceptType: false, maxFileSize: false });
+    //Handle File
+    const handleFile = (file) => {
+        const lastDotIndex = file.name.lastIndexOf(".");
+        const hasExtension = lastDotIndex !== -1 && lastDotIndex !== 0;
+        return {
+            file,
+            fileInfo: {
+                name: hasExtension ? file.name.slice(0, lastDotIndex) : file.name,
+                ext: hasExtension ? file.name.slice(lastDotIndex + 1) : "",
+                size: Number((file.size / 1024 / 1024).toFixed(2)),
+                type: file.type,
+            }
+        };
+    };
     //Handle Change
     const handleChange = (files) => __awaiter(void 0, void 0, void 0, function* () {
         if (!files)
@@ -48,13 +62,7 @@ const FileUpload = ({ children, onChange, value, onError, inputProps, acceptType
             onError === null || onError === void 0 ? void 0 : onError(newErrors);
             return;
         }
-        onChange({
-            file: file, fileInfo: {
-                name: file.name.split(".")[0],
-                size: uploadSize,
-                type: file.type,
-            }
-        });
+        onChange(handleFile(file));
     });
     //On File Remove
     const onFileRemove = () => {

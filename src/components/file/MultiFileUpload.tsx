@@ -24,14 +24,20 @@ const MultiFileUpload = ({ children, onChange, value, onError, inputProps, accep
 
 
     //Handle File
-    const handleFile = (file: File) => ({
-        file,
-        fileInfo: {
-            name: file.name.split(".")[0] || file.name,
-            size: Number((file.size / 1024 * 1024).toFixed(2)),
-            type: file.type,
-        }
-    });
+    const handleFile = (file: File) => {
+        const lastDotIndex = file.name.lastIndexOf(".");
+        const hasExtension = lastDotIndex !== -1 && lastDotIndex !== 0;
+
+        return {
+            file,
+            fileInfo: {
+                name: hasExtension ? file.name.slice(0, lastDotIndex) : file.name,
+                ext: hasExtension ? file.name.slice(lastDotIndex + 1) : "",
+                size: Number((file.size / 1024 / 1024).toFixed(2)),
+                type: file.type,
+            }
+        };
+    };
 
     //Handle The File Change
     const handleChange = async (files: FileList | null) => {
