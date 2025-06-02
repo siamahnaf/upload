@@ -64,7 +64,12 @@ export declare enum FileAcceptType {
     WOFF2 = "font/woff2",
     TTF = "font/ttf",
     OTF = "font/otf",
-    IMAGES = "image/*",
+    JPG = "image/jpeg",
+    JPEG = "image/jpeg",
+    PNG = "image/png",
+    GIF = "image/gif",
+    WEBP = "image/webp",
+    SVG = "image/svg+xml",
     EXE = "application/vnd.microsoft.portable-executable",
     DMG = "application/x-apple-diskimage"
 }

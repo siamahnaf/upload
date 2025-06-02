@@ -51,7 +51,12 @@ var FileAcceptType;
     FileAcceptType["TTF"] = "font/ttf";
     FileAcceptType["OTF"] = "font/otf";
     //Images
-    FileAcceptType["IMAGES"] = "image/*";
+    FileAcceptType["JPG"] = "image/jpeg";
+    FileAcceptType["JPEG"] = "image/jpeg";
+    FileAcceptType["PNG"] = "image/png";
+    FileAcceptType["GIF"] = "image/gif";
+    FileAcceptType["WEBP"] = "image/webp";
+    FileAcceptType["SVG"] = "image/svg+xml";
     // Executables
     FileAcceptType["EXE"] = "application/vnd.microsoft.portable-executable";
     FileAcceptType["DMG"] = "application/x-apple-diskimage";

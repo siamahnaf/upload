@@ -83,7 +83,12 @@ export enum FileAcceptType {
     OTF = "font/otf",
 
     //Images
-    IMAGES = "image/*",
+    JPG = "image/jpeg",
+    JPEG = "image/jpeg",
+    PNG = "image/png",
+    GIF = "image/gif",
+    WEBP = "image/webp",
+    SVG = "image/svg+xml",
 
     // Executables
     EXE = "application/vnd.microsoft.portable-executable",
