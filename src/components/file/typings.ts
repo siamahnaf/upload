@@ -82,6 +82,9 @@ export enum FileAcceptType {
     TTF = "font/ttf",
     OTF = "font/otf",
 
+    //Images
+    IMAGES = "image/*",
+
     // Executables
     EXE = "application/vnd.microsoft.portable-executable",
     DMG = "application/x-apple-diskimage"

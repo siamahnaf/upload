@@ -47,6 +47,8 @@ export var FileAcceptType;
     FileAcceptType["WOFF2"] = "font/woff2";
     FileAcceptType["TTF"] = "font/ttf";
     FileAcceptType["OTF"] = "font/otf";
+    //Images
+    FileAcceptType["IMAGES"] = "image/*";
     // Executables
     FileAcceptType["EXE"] = "application/vnd.microsoft.portable-executable";
     FileAcceptType["DMG"] = "application/x-apple-diskimage";

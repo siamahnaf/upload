@@ -64,6 +64,7 @@ export declare enum FileAcceptType {
     WOFF2 = "font/woff2",
     TTF = "font/ttf",
     OTF = "font/otf",
+    IMAGES = "image/*",
     EXE = "application/vnd.microsoft.portable-executable",
     DMG = "application/x-apple-diskimage"
 }
